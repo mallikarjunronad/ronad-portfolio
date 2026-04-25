@@ -92,8 +92,9 @@ export const Hero = () => {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 h-12 px-7 rounded-2xl bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] text-primary-foreground font-semibold glow-primary hover:scale-105 hover:bg-right transition-all duration-500"
+              className="group relative inline-flex items-center gap-2 h-12 px-7 rounded-2xl bg-gradient-to-r from-accent via-primary to-neon bg-[length:200%_auto] text-primary-foreground font-semibold glow-primary hover:scale-105 hover:bg-right transition-all duration-500 animate-glow-pulse"
             >
+              <Flame className="w-4 h-4" />
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
