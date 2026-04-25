@@ -44,7 +44,7 @@ export const ParticleField = () => {
           const dy = p.y - q.y;
           const d = Math.sqrt(dx * dx + dy * dy);
           if (d < 130) {
-            ctx.strokeStyle = `hsla(263, 90%, 70%, ${0.15 * (1 - d / 130)})`;
+            ctx.strokeStyle = `hsla(20, 95%, 60%, ${0.15 * (1 - d / 130)})`;
             ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -53,7 +53,7 @@ export const ParticleField = () => {
           }
         }
 
-        ctx.fillStyle = "hsla(263, 95%, 75%, 0.7)";
+        ctx.fillStyle = "hsla(20, 95%, 70%, 0.7)";
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
