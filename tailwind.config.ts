@@ -80,7 +80,7 @@ export default {
         "float": { "0%, 100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-20px)" } },
         "glow-pulse": {
           "0%, 100%": { boxShadow: "0 0 30px hsl(var(--primary) / 0.4)" },
-          "50%": { boxShadow: "0 0 60px hsl(var(--primary) / 0.7)" },
+          "50%": { boxShadow: "0 0 80px hsl(var(--primary) / 0.9), 0 0 120px hsl(0 90% 55% / 0.6)" },
         },
         "gradient-shift": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
@@ -89,6 +89,32 @@ export default {
         "blink": { "0%, 100%": { opacity: "1" }, "50%": { opacity: "0" } },
         "spin-slow": { from: { transform: "rotate(0deg)" }, to: { transform: "rotate(360deg)" } },
         "shimmer": { "0%": { backgroundPosition: "-200% 0" }, "100%": { backgroundPosition: "200% 0" } },
+        "flame-flicker": {
+          "0%, 100%": { transform: "scaleY(1) scaleX(1) translateY(0)", opacity: "0.95" },
+          "25%": { transform: "scaleY(1.08) scaleX(0.97) translateY(-4px)", opacity: "1" },
+          "50%": { transform: "scaleY(0.94) scaleX(1.03) translateY(2px)", opacity: "0.85" },
+          "75%": { transform: "scaleY(1.05) scaleX(0.99) translateY(-2px)", opacity: "1" },
+        },
+        "flame-flicker-2": {
+          "0%, 100%": { transform: "scaleY(0.98) scaleX(1.02) translateY(2px)", opacity: "0.9" },
+          "33%": { transform: "scaleY(1.1) scaleX(0.96) translateY(-6px)", opacity: "1" },
+          "66%": { transform: "scaleY(0.92) scaleX(1.04) translateY(3px)", opacity: "0.8" },
+        },
+        "ember-rise": {
+          "0%": { transform: "translateY(0) scale(1)", opacity: "0" },
+          "20%": { opacity: "1" },
+          "100%": { transform: "translateY(-100vh) scale(0.4)", opacity: "0" },
+        },
+        "fire-text": {
+          "0%, 100%": {
+            textShadow:
+              "0 0 10px hsl(20 100% 60% / 0.8), 0 0 30px hsl(15 100% 50% / 0.6), 0 0 60px hsl(0 100% 45% / 0.4)",
+          },
+          "50%": {
+            textShadow:
+              "0 0 20px hsl(35 100% 70% / 1), 0 0 50px hsl(20 100% 55% / 0.8), 0 0 90px hsl(0 100% 50% / 0.6)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,6 +128,10 @@ export default {
         "blink": "blink 1s step-end infinite",
         "spin-slow": "spin-slow 20s linear infinite",
         "shimmer": "shimmer 3s linear infinite",
+        "flame-flicker": "flame-flicker 1.6s ease-in-out infinite",
+        "flame-flicker-2": "flame-flicker-2 2.1s ease-in-out infinite",
+        "ember-rise": "ember-rise 6s linear infinite",
+        "fire-text": "fire-text 2.5s ease-in-out infinite",
       },
     },
   },

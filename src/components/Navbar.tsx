@@ -38,7 +38,7 @@ export const Navbar = () => {
       <div className={`container ${scrolled ? "glass rounded-2xl max-w-6xl" : ""} transition-all duration-500`}>
         <nav className="flex items-center justify-between px-2">
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-primary via-secondary to-neon flex items-center justify-center font-display font-bold text-primary-foreground glow-primary group-hover:scale-110 transition-transform">
+            <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-accent via-primary to-neon flex items-center justify-center font-display font-bold text-primary-foreground glow-primary group-hover:scale-110 transition-transform animate-glow-pulse">
               MR
             </div>
             <span className="font-display font-semibold hidden sm:inline">Mallikarjun</span>
