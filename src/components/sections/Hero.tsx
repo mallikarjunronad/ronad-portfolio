@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, Github, Linkedin, Sparkles } from "lucide-react";
-import { ParticleField } from "./ParticleField";
-import { Typewriter } from "./Typewriter";
+import { ParticleField } from "@/components/ParticleField";
+import { Typewriter } from "@/components/Typewriter";
 
 export const Hero = () => {
   return (
