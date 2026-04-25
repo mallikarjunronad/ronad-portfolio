@@ -91,13 +91,13 @@ export const FireField = () => {
         const radius = e.r * (1 + lifeRatio * 0.6);
 
         // Outer glow
-        const grad = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, radius * 6);
+        const grad = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, radius * 4);
         grad.addColorStop(0, `hsla(${e.hue}, 100%, 65%, ${alpha})`);
-        grad.addColorStop(0.4, `hsla(${e.hue - 5}, 100%, 50%, ${alpha * 0.4})`);
+        grad.addColorStop(0.4, `hsla(${e.hue - 5}, 100%, 50%, ${alpha * 0.3})`);
         grad.addColorStop(1, `hsla(${e.hue - 10}, 100%, 40%, 0)`);
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.arc(e.x, e.y, radius * 6, 0, Math.PI * 2);
+        ctx.arc(e.x, e.y, radius * 4, 0, Math.PI * 2);
         ctx.fill();
 
         // Hot core
