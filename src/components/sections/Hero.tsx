@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Github, Linkedin, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, Github, Linkedin, Flame } from "lucide-react";
 import { ParticleField } from "@/components/ParticleField";
+import { FireField } from "@/components/FireField";
+import { FlameBase } from "@/components/FlameBase";
 import { Typewriter } from "@/components/Typewriter";
 
 export const Hero = () => {
@@ -9,17 +11,19 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero noise"
     >
-      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute inset-0 grid-bg opacity-60" />
       <ParticleField />
+      <FireField />
+      <FlameBase />
 
-      {/* Floating gradient orbs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-primary/30 blur-[120px] animate-float" />
+      {/* Floating gradient orbs - molten */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-primary/40 blur-[120px] animate-float animate-glow-pulse" />
       <div
-        className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-neon/30 blur-[120px] animate-float"
+        className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-neon/40 blur-[120px] animate-float"
         style={{ animationDelay: "2s" }}
       />
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-secondary/20 blur-[140px] animate-float"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-secondary/30 blur-[140px] animate-float"
         style={{ animationDelay: "4s" }}
       />
 
@@ -29,9 +33,9 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 text-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 text-sm border border-primary/40 glow-primary"
           >
-            <Sparkles className="w-4 h-4 text-accent" />
+            <Flame className="w-4 h-4 text-accent animate-pulse" />
             <span className="text-muted-foreground">Available for collaborations & internships</span>
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           </motion.div>
@@ -40,7 +44,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6"
+            className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6 animate-fire-text"
           >
             Hi, I'm{" "}
             <span className="text-gradient bg-[length:200%_auto] animate-gradient-shift">
