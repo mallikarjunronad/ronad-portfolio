@@ -37,19 +37,19 @@ export const FireField = () => {
     };
 
     const embers: Ember[] = [];
-    const maxEmbers = 180;
+    const maxEmbers = 140;
 
     const spawn = (): Ember => {
-      const maxLife = 80 + Math.random() * 120;
+      const maxLife = 60 + Math.random() * 90;
       return {
         x: Math.random() * w,
-        y: h + Math.random() * 40 * dpr,
-        vx: (Math.random() - 0.5) * 0.6 * dpr,
-        vy: -(0.6 + Math.random() * 1.6) * dpr,
-        r: (1 + Math.random() * 2.5) * dpr,
+        y: h + Math.random() * 30 * dpr,
+        vx: (Math.random() - 0.5) * 0.8 * dpr,
+        vy: -(1.2 + Math.random() * 2.4) * dpr,
+        r: (0.5 + Math.random() * 1.2) * dpr,
         life: 0,
         maxLife,
-        hue: 10 + Math.random() * 35, // 10 (red) → 45 (gold)
+        hue: 10 + Math.random() * 35,
       };
     };
 
@@ -67,9 +67,9 @@ export const FireField = () => {
       const dt = Math.min((t - lastT) / 16.67, 2);
       lastT = t;
 
-      // Subtle dark overlay fade for trails
+      // Stronger fade so trails clear quickly
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "rgba(0, 0, 0, 0.18)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
       ctx.fillRect(0, 0, w, h);
 
       ctx.globalCompositeOperation = "lighter";
